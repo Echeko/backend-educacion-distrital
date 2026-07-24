@@ -40,7 +40,7 @@ app.post("/unidades", async (req, res) => {
 
 app.get("/unidades", async (req, res) => {
   try {
-    const result = await pool.query("SELECT * FROM unidades ORDER BY id ASC");
+    const result = await pool.query("SELECT * FROM unidades_educativas ORDER BY id ASC");
     res.json(result.rows);
   } catch (error) {
     console.error("Error al obtener unidades educativas:", error.message);
